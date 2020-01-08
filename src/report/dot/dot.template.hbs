@@ -10,9 +10,6 @@ strict digraph "dependency-cruiser output"{
     {{else}}
     "{{{source}}}" [label="{{{label}}}" {{#if rule}}tooltip="{{{rule.name}}}" {{/if}}{{#if URL}}URL="{{{URL}}}" {{/if}}{{#if themeAttrs}}{{{themeAttrs}}}{{/if}}]
     {{/if}}
-{{/modules}}
-
-{{#modules}}
     {{#dependencies}}
     "{{{../source}}}" -> "{{{resolved}}}"{{#if hasExtraAttributes}} [{{#if rule.name}}xlabel="{{{rule.name}}}" tooltip="{{{rule.name}}}" {{/if}}{{#if themeAttrs}}{{{themeAttrs}}}{{/if}}]{{/if}}
     {{/dependencies}}
